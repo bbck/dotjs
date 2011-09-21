@@ -1,6 +1,7 @@
 // From the HackemUp Chrome extension https://github.com/obeattie/HackemUp-extension
 
 $(function() {
+  if (location.pathname == '/') {
     // Setup the scripts
     window.hnuBase = 'https://github.com/moderation/HackemUp/raw/master/';
     var head = document.getElementsByTagName('head')[0],
@@ -20,4 +21,5 @@ $(function() {
     $('tbody tr:eq(3) a').live('click', function(){
         $(this).attr('target', '_blank');
     });
+  };
 })
